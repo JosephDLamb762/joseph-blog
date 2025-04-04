@@ -41,6 +41,7 @@
     .top-bar h1 {
       font-size: 1.8em;
       color: #fff; /* Make sure the title in the top bar is white */
+      text-align: center;
     }
 
     .top-bar a {
@@ -92,10 +93,20 @@
       text-align: center;
     }
 
+    .logo {
+      border-radius: 30px;
+      display: block;
+      margin: 20px auto; /* Centers the logo */
+      width: 100px; /* Adjust logo size as needed */
+      height: auto;
+    }
   </style>
 </head>
 <body>
-  <div class = "top-bar">  
+  <div class = "top-bar">
+    <a href="index.html">
+        <img src="images/Logo_for_blog.png" alt="Your Logo" class="logo" />
+      </a>  
     <h1>Welcome to Joseph's Blog</h1>
     <a href="about.html" class="top-link">About</a>
   </div>
