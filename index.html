@@ -16,13 +16,46 @@
 <body>
   <h1>Welcome to Joseph's Blog</h1>
 
-  <h2>Join the Mailing List</h2>
+  <!-- <h2>Join the Mailing List</h2>
   <form action="https://script.google.com/macros/s/AKfycbyb6SRLsPouzbdp7scA8dK5HqHLodrbWyKs0jQ6NGfVAxfrFiDfULGImbxGGquGc8H2/exec" method="POST">
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" required />
     <input type="hidden" name="_redirect" value="thank-you.html" />
     <button type="submit">Subscribe</button>
-  </form>
+  </form> -->
+
+  <h2>Join the Mailing List</h2>
+<form id="mailing-form">
+  <label for="email">Email:</label><br>
+  <input type="email" name="email" id="email" required /><br>
+  <button type="submit">Subscribe</button>
+</form>
+
+<script>
+  const form = document.getElementById('mailing-form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop default form submission
+
+    const formData = new FormData(form);
+
+    fetch('https://script.google.com/macros/s/AKfycbyb6SRLsPouzbdp7scA8dK5HqHLodrbWyKs0jQ6NGfVAxfrFiDfULGImbxGGquGc8H2/exec', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = 'thank-you.html'; // Redirect manually
+      } else {
+        alert('Submission failed. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error. Please try again later.');
+    });
+  });
+</script>
 
   <h2>Previous Posts</h2>
   <div class="post">
