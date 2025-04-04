@@ -25,7 +25,7 @@
 
     /* Top Bar Styling */
     .top-bar {
-      position: fixed;
+      position: sticky;
       width: 100%;
       top: 0;
       left: 0;
@@ -40,6 +40,7 @@
 
     .top-bar h1 {
       font-size: 1.8em;
+      color: #fff; /* Make sure the title in the top bar is white */
     }
 
     .top-bar a {
@@ -96,9 +97,9 @@
 <body>
   <div class = "top-bar">  
     <h1>Welcome to Joseph's Blog</h1>
-    <a href="about.html" class="about-me">Learn more about me</a>
+    <a href="about.html" class="about-me">About</a>
   </div>
-  
+
   <h2>Join the Mailing List</h2>
 <form id="mailing-form">
   <label for="email">Email:</label><br>
