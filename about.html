@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Blog</title>
+  <style>
+     /* Global Reset */
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding-top: 60px; /* To avoid overlap with the fixed top bar */
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Top Bar Styling */
+    .top-bar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #3366cc; /* Blue color for the top bar */
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .top-bar h1 {
+      font-size: 1.8em;
+      color: #fff; /* Make sure the title in the top bar is white */
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header Styling */
+    h1 {
+      font-size: 2.5em;
+      color: #3366cc;
+      margin-bottom: 20px;
+    }
+
+    /* Link Styling (global) */
+    a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Blog Post Links */
+    h2 {
+      font-size: 1.8em;
+      color: #444;
+      margin-top: 30px;
+    }
+    h3 {
+      font-size: 1.5em;
+      color: #555;
+      margin-top: 20px;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+
+    /*Link (for top bar) */
+    .top-link {
+      font-size: 1.2em;
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+    }
+
+    .about-me-section img {
+      border-radius: 50%; /* Make the image circular */
+      width: 200px; /* Set width of the image */
+      height: 200px; /* Set height of the image */
+      object-fit: cover; /* Ensure the image fills the circle without distortion */
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .about-me-section h2 {
+      font-size: 2em;
+      color: #3366cc;
+      margin-bottom: 10px;
+    }
+
+    .about-me-section p {
+      font-size: 1.2em;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class = "top-bar">  
+    <h1>About Me</h1>
+    <a href="index.html" class="top-link">Return To Homepage</a>
+  </div>
+
+  <div class="about-me-section">
+    <!-- Image of You -->
+    <img src="images/headshot.jpg" alt="Joseph Lamb" />
+    <h2>Joseph Lamb</h2>
+    <p>Hi! I'm Joseph Lamb, a passionate mathematician and software engineer. Welcome to my blog, where I share insights on math, algorithms, and more. When I'm not coding, I love skiing, cooking, and exploring new topics in technology.</p>
+  </div>
+</body>
+</html>
