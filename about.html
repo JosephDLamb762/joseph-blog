@@ -96,7 +96,7 @@
     padding: 100px 20px 20px; /* Additional padding for spacing */
     text-align: center;
     }
-    
+
     .about-me-section img {
       border-radius: 50%; /* Make the image circular */
       width: 200px; /* Set width of the image */
@@ -117,6 +117,19 @@
       color: #555;
       line-height: 1.6;
     }
+
+      /* LinkedIn Icon Styling */
+      .linkedin-icon {
+      font-size: 2em;
+      color: #0077b5; /* LinkedIn color */
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .linkedin-icon:hover {
+      color: #0e76a8; /* Darker LinkedIn color on hover */
+    }
+
   </style>
 </head>
 
@@ -127,9 +140,11 @@
   </div>
 
   <div class="about-me-section">
-    <!-- Image of You -->
     <img src="images/headshot.jpg" alt="Joseph Lamb" />
     <h2>Joseph Lamb</h2>
+    <a href="https://www.linkedin.com/in/joseph-david-lamb/" target="_blank" class="linkedin-icon">
+        <i class="fab fa-linkedin"></i> <!-- Font Awesome LinkedIn Icon -->
+    </a>
     <p>Hi! I'm Joseph Lamb, a passionate mathematician and finance enthusiast. I made this blog to show that while finance can seem scary, it can also be fun and exciting. With finance, there often is no absolutely right answers which can be daunting, but I try to make it a bit more straight forward by breaking down trending topics and addressing likely questions to be raised. I will be posting weekly. Subscribe to stay tuned.</p>
   </div>
 </body>
