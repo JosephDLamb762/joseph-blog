@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Blog</title>
   <style>
-     /* Global Reset */
-     * {
+    /* Global Reset */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -38,10 +38,16 @@
       z-index: 1000;
     }
 
+    /* Logo and Title Section */
+    .top-bar .logo-title {
+      display: flex;
+      align-items: center;
+    }
+
     .top-bar h1 {
       font-size: 1.8em;
       color: #fff; /* Make sure the title in the top bar is white */
-      text-align: center;
+      margin-left: 10px; /* Add some space between the logo and the title */
     }
 
     .top-bar a {
@@ -86,7 +92,7 @@
       margin-bottom: 1em;
     }
 
-    /*Link (for top bar) */
+    /* Link for top bar */
     .top-link {
       font-size: 1.2em;
       margin-top: 30px;
@@ -94,10 +100,10 @@
       text-align: center;
     }
 
+    /* Logo Styling */
     .logo {
       border-radius: 30px;
       display: block;
-      margin: 20px auto; /* Centers the logo */
       width: 100px; /* Adjust logo size as needed */
       height: auto;
     }
@@ -105,50 +111,53 @@
   </style>
 </head>
 <body>
-  <div class = "top-bar">
-    <a href="index.html">
+
+  <div class="top-bar">
+    <div class="logo-title">
+      <a href="index.html">
         <img src="images/Logo_for_blog.png" alt="Your Logo" class="logo" />
-      </a>  
-    <h1>Joseph's Blog</h1>
+      </a>
+      <h1>Joseph's Blog</h1>
+    </div>
     <a href="about.html" class="top-link">About</a>
   </div>
 
   <h2>Join the Mailing List</h2>
-<form id="mailing-form">
-  <label for="email">Email:</label><br>
-  <input type="email" name="email" id="email" required /><br>
-  <button type="submit">Subscribe</button>
-</form>
+  <form id="mailing-form">
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email" required /><br>
+    <button type="submit">Subscribe</button>
+  </form>
 
-<script>
-  const form = document.getElementById('mailing-form');
+  <script>
+    const form = document.getElementById('mailing-form');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Stop default form submission
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Stop default form submission
 
-    const formData = new FormData(form);
+      const formData = new FormData(form);
 
-    fetch('https://script.google.com/macros/s/AKfycbyb6SRLsPouzbdp7scA8dK5HqHLodrbWyKs0jQ6NGfVAxfrFiDfULGImbxGGquGc8H2/exec', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        window.location.href = 'thank-you.html'; // Redirect manually
-      } else {
-        alert('Submission failed. Please try again.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was an error. Please try again later.');
+      fetch('https://script.google.com/macros/s/AKfycbyb6SRLsPouzbdp7scA8dK5HqHLodrbWyKs0jQ6NGfVAxfrFiDfULGImbxGGquGc8H2/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = 'thank-you.html'; // Redirect manually
+        } else {
+          alert('Submission failed. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error. Please try again later.');
+      });
     });
-  });
-</script>
+  </script>
 
   <h2>Previous Posts</h2>
   <div class="post">
-    <h3><a href="blog/NVIDIA-TooLate.html">Is It Possible To Be Loo Late To Buy a Stock?</a></h3>
+    <h3><a href="blog/NVIDIA-TooLate.html">Is It Possible To Be Too Late To Buy a Stock?</a></h3>
     <p>A deep dive into NVIDIA and the notion of being too late.</p>
   </div>
 </body>
