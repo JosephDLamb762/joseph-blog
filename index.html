@@ -5,31 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Blog</title>
   <style>
-    /* Global Reset */
-    * {
+     /* Global Reset */
+     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-  
+
     /* Body Styling */
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
-      padding: 20px;
+      padding-top: 60px; /* To avoid overlap with the fixed top bar */
       max-width: 900px;
       margin: auto;
     }
-  
+
+    /* Top Bar Styling */
+    .top-bar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #3366cc; /* Blue color for the top bar */
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .top-bar h1 {
+      font-size: 1.8em;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
     /* Header Styling */
     h1 {
       font-size: 2.5em;
-      color: #3366cc; /* Blue color */
+      color: #3366cc;
       margin-bottom: 20px;
     }
-  
+
     /* Link Styling (global) */
     a {
       color: #3366cc;
@@ -38,24 +67,8 @@
     a:hover {
       text-decoration: underline;
     }
-  
-    /* About Me Link */
-    .about-me {
-      font-size: 1.2em;
-      margin-top: 30px;
-      display: block;
-      text-align: center;
-    }
-  
-    /* Footer (to be added later if needed) */
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.8em;
-      color: #777;
-    }
-  
-    /* Styling for Blog Posts */
+
+    /* Blog Post Links */
     h2 {
       font-size: 1.8em;
       color: #444;
@@ -69,13 +82,23 @@
     p {
       margin-bottom: 1em;
     }
+
+    /* About Me Link (for homepage) */
+    .about-me {
+      font-size: 1.2em;
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Welcome to Joseph's Blog</h1>
-
-  <a href="about.html" class="about-me">Learn more about me</a>
-
+  <div class = "top-bar">  
+    <h1>Welcome to Joseph's Blog</h1>
+    <a href="about.html" class="about-me">Learn more about me</a>
+  </div>
+  
   <h2>Join the Mailing List</h2>
 <form id="mailing-form">
   <label for="email">Email:</label><br>
