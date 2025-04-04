@@ -42,6 +42,7 @@
     .top-bar h1 {
       font-size: 1.8em;
       color: #fff; /* Make sure the title in the top bar is white */
+      text-align: center;
     }
 
     .top-bar a {
@@ -131,11 +132,22 @@
       color: #0e76a8; /* Darker LinkedIn color on hover */
     }
 
+    /* Logo Image Styling */
+    .logo {
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto; /* Centers the logo */
+      width: 100px; /* Adjust logo size as needed */
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
   <div class = "top-bar">  
+    <a href="index.html">
+        <img src="images/Logo_for_blog.png" alt="Your Logo" class="logo" />
+      </a>
     <h1>About Me</h1>
     <a href="index.html" class="top-link">Return To Homepage</a>
   </div>
