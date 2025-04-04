@@ -5,24 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Blog</title>
   <style>
-    body { font-family: 'Times New Roman', Times, Georgia, serif; max-width: 800px; margin: auto; padding: 20px; }
-    h1, h2 { color: #333; }
-    form { margin-bottom: 40px; }
-    input[type="email"] { padding: 10px; width: 70%; }
-    input[type="submit"] { padding: 10px 20px; }
-    .post { border-top: 1px solid #ccc; padding: 20px 0; }
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    /* Body Styling */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+  
+    /* Header Styling */
+    h1 {
+      font-size: 2.5em;
+      color: #3366cc; /* Blue color */
+      margin-bottom: 20px;
+    }
+  
+    /* Link Styling (global) */
+    a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    /* About Me Link */
+    .about-me {
+      font-size: 1.2em;
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+    }
+  
+    /* Footer (to be added later if needed) */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.8em;
+      color: #777;
+    }
+  
+    /* Styling for Blog Posts */
+    h2 {
+      font-size: 1.8em;
+      color: #444;
+      margin-top: 30px;
+    }
+    h3 {
+      font-size: 1.5em;
+      color: #555;
+      margin-top: 20px;
+    }
+    p {
+      margin-bottom: 1em;
+    }
   </style>
 </head>
 <body>
   <h1>Welcome to Joseph's Blog</h1>
 
-  <!-- <h2>Join the Mailing List</h2>
-  <form action="https://script.google.com/macros/s/AKfycbyb6SRLsPouzbdp7scA8dK5HqHLodrbWyKs0jQ6NGfVAxfrFiDfULGImbxGGquGc8H2/exec" method="POST">
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required />
-    <input type="hidden" name="_redirect" value="thank-you.html" />
-    <button type="submit">Subscribe</button>
-  </form> -->
+  <a href="about.html" class="about-me">Learn more about me</a>
 
   <h2>Join the Mailing List</h2>
 <form id="mailing-form">
